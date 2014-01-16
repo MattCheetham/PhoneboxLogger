@@ -56,6 +56,7 @@
 {
     UIAlertView *numberPrompt = [[UIAlertView alloc] initWithTitle:@"Phone number" message:@"Enter the phone number for this box" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Confirm", nil];
     numberPrompt.alertViewStyle = UIAlertViewStylePlainTextInput;
+    numberPrompt.tag = 1;
     
     UITextField *tf = [numberPrompt textFieldAtIndex:0];
     tf.keyboardType = UIKeyboardTypeNumberPad;
@@ -117,6 +118,13 @@
 - (void)mailComposeController:(MFMailComposeViewController*)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError*)error
 {
     [controller dismissViewControllerAnimated:YES completion:nil];
+    
+    if(result == MFMailComposeResultSent){
+        
+        UIAlertView *thankyouAlert = [[UIAlertView alloc] initWithTitle:@"Thank you" message:@"Sean appreciates your submission, keep it up!" delegate:self cancelButtonTitle:@"No problemo!" otherButtonTitles:nil];
+        [thankyouAlert show];
+        
+    }
 }
 
 @end
