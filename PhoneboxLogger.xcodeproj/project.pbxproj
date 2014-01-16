@@ -19,6 +19,7 @@
 		33D28BD418885B5900E0B9AE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33D28BBC18885B5900E0B9AE /* UIKit.framework */; };
 		33D28BDC18885B5900E0B9AE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 33D28BDA18885B5900E0B9AE /* InfoPlist.strings */; };
 		33D28BDE18885B5900E0B9AE /* PhoneboxLoggerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 33D28BDD18885B5900E0B9AE /* PhoneboxLoggerTests.m */; };
+		33D28BEC18885C9500E0B9AE /* MCMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33D28BEB18885C9500E0B9AE /* MCMapViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,8 @@
 		33D28BD918885B5900E0B9AE /* PhoneboxLoggerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PhoneboxLoggerTests-Info.plist"; sourceTree = "<group>"; };
 		33D28BDB18885B5900E0B9AE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		33D28BDD18885B5900E0B9AE /* PhoneboxLoggerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhoneboxLoggerTests.m; sourceTree = "<group>"; };
+		33D28BEA18885C9500E0B9AE /* MCMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MCMapViewController.h; path = PhoneboxLogger/MCMapViewController.h; sourceTree = "<group>"; };
+		33D28BEB18885C9500E0B9AE /* MCMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MCMapViewController.m; path = PhoneboxLogger/MCMapViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +80,10 @@
 		33D28BAC18885B5900E0B9AE = {
 			isa = PBXGroup;
 			children = (
+				33D28BEF18885CCA00E0B9AE /* Models */,
+				33D28BEE18885CA300E0B9AE /* Views */,
+				33D28BF018885CD300E0B9AE /* Controllers */,
+				33D28BED18885C9C00E0B9AE /* View Controllers */,
 				33D28BBE18885B5900E0B9AE /* PhoneboxLogger */,
 				33D28BD718885B5900E0B9AE /* PhoneboxLoggerTests */,
 				33D28BB718885B5900E0B9AE /* Frameworks */,
@@ -142,6 +149,36 @@
 				33D28BDA18885B5900E0B9AE /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		33D28BED18885C9C00E0B9AE /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				33D28BEA18885C9500E0B9AE /* MCMapViewController.h */,
+				33D28BEB18885C9500E0B9AE /* MCMapViewController.m */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		33D28BEE18885CA300E0B9AE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		33D28BEF18885CCA00E0B9AE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		33D28BF018885CD300E0B9AE /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,6 +277,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33D28BEC18885C9500E0B9AE /* MCMapViewController.m in Sources */,
 				33D28BC918885B5900E0B9AE /* MCAppDelegate.m in Sources */,
 				33D28BC518885B5900E0B9AE /* main.m in Sources */,
 			);
@@ -442,6 +480,7 @@
 				33D28BE318885B5900E0B9AE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		33D28BE418885B5900E0B9AE /* Build configuration list for PBXNativeTarget "PhoneboxLoggerTests" */ = {
 			isa = XCConfigurationList;
@@ -450,6 +489,7 @@
 				33D28BE618885B5900E0B9AE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
