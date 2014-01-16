@@ -22,6 +22,7 @@
 		33D28BEC18885C9500E0B9AE /* MCMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33D28BEB18885C9500E0B9AE /* MCMapViewController.m */; };
 		33D28BF218885EE800E0B9AE /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33D28BF118885EE800E0B9AE /* MapKit.framework */; };
 		33D28BF418885EED00E0B9AE /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33D28BF318885EED00E0B9AE /* CoreLocation.framework */; };
+		33D28BF7188860B500E0B9AE /* MCMapOverlayButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 33D28BF6188860B500E0B9AE /* MCMapOverlayButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,8 @@
 		33D28BEB18885C9500E0B9AE /* MCMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MCMapViewController.m; path = PhoneboxLogger/MCMapViewController.m; sourceTree = "<group>"; };
 		33D28BF118885EE800E0B9AE /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		33D28BF318885EED00E0B9AE /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		33D28BF5188860B500E0B9AE /* MCMapOverlayButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MCMapOverlayButton.h; path = PhoneboxLogger/MCMapOverlayButton.h; sourceTree = "<group>"; };
+		33D28BF6188860B500E0B9AE /* MCMapOverlayButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MCMapOverlayButton.m; path = PhoneboxLogger/MCMapOverlayButton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +174,8 @@
 		33D28BEE18885CA300E0B9AE /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				33D28BF5188860B500E0B9AE /* MCMapOverlayButton.h */,
+				33D28BF6188860B500E0B9AE /* MCMapOverlayButton.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -288,6 +293,7 @@
 				33D28BEC18885C9500E0B9AE /* MCMapViewController.m in Sources */,
 				33D28BC918885B5900E0B9AE /* MCAppDelegate.m in Sources */,
 				33D28BC518885B5900E0B9AE /* main.m in Sources */,
+				33D28BF7188860B500E0B9AE /* MCMapOverlayButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
