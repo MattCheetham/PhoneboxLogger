@@ -9,7 +9,7 @@
 #import "MCMapViewController.h"
 #import "MCPhoneboxMapView.h"
 
-@interface MCMapViewController ()
+@interface MCMapViewController () <MFMailComposeViewControllerDelegate, MFMessageComposeViewControllerDelegate>
 
 @property (nonatomic, strong) MCPhoneboxMapView *mapView;
 
@@ -23,7 +23,7 @@
     if (self) {
         // Custom initialization
         self.mapView = [MCPhoneboxMapView new];
-        [self.mapView.addPhoneBoxButton addTarget:self action:@selector(registerLocation) forControlEvents:UIControlEventTouchUpInside];
+        [self.mapView.addPhoneBoxButton addTarget:self action:@selector(promptUserForNumber) forControlEvents:UIControlEventTouchUpInside];
         [self.view addSubview:self.mapView];
         
     }
@@ -52,7 +52,20 @@
     self.mapView.frame = self.view.bounds;
 }
 
-- (void)registerLocation
+- (void)promptUserForNumber
+{
+    UIAlertView *numberPrompt = [[UIAlertView alloc] initWithTitle:@"Phone number" message:@"Enter the phone number for this box" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Confirm", nil];
+    numberPrompt.alertViewStyle = UIAlertViewStylePlainTextInput;
+    
+    UITextField *tf = [numberPrompt textFieldAtIndex:0];
+    tf.keyboardType = UIKeyboardTypeNumberPad;
+    
+    [numberPrompt show];
+}
+
+#pragma mark - Box geocoding and registration
+
+- (void)registerLocationWithNumber:(NSString *)phoneNumber
 {
     [[CLGeocoder new] reverseGeocodeLocation:self.mapView.userLocation.location completionHandler:^(NSArray *placemarks, NSError *error) {
         
@@ -61,8 +74,10 @@
             if([MFMailComposeViewController canSendMail]){
                 
                 MFMailComposeViewController *mailView = [[MFMailComposeViewController alloc] init];
+                mailView.mailComposeDelegate = self;
+                [mailView setToRecipients:@[@"sean@example.com"]];
                 [mailView setSubject:@"New phonebox"];
-                [mailView setMessageBody:[NSString stringWithFormat:@"Hi Sean,\n\nHere is a new Phone box for you:\n\n%@\n\nYou're welcome", placemark.description] isHTML:NO];
+                [mailView setMessageBody:[NSString stringWithFormat:@"Hi Sean,\n\nHere is a new Phone box for you:\n\nPhone Number: %@\n\nLocation: %@\n\nYou're welcome", phoneNumber, placemark.description] isHTML:NO];
                 
                 [self presentViewController:mailView animated:YES completion:nil];
                 
@@ -80,6 +95,28 @@
         
         
     }];
+}
+
+#pragma mark - UIAlertViewDelegate
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    
+    if (buttonIndex == 1) {
+        
+        NSString *boxPhoneNumber = [alertView textFieldAtIndex:0].text;
+        
+        [self registerLocationWithNumber:boxPhoneNumber];
+        
+    }
+    
+}
+
+#pragma mark - Mail delegate
+
+- (void)mailComposeController:(MFMailComposeViewController*)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError*)error
+{
+    [controller dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end
