@@ -24,6 +24,7 @@
 		33D28BF418885EED00E0B9AE /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33D28BF318885EED00E0B9AE /* CoreLocation.framework */; };
 		33D28BF7188860B500E0B9AE /* MCMapOverlayButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 33D28BF6188860B500E0B9AE /* MCMapOverlayButton.m */; };
 		33D28BFA1888624300E0B9AE /* MCPhoneboxMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33D28BF91888624300E0B9AE /* MCPhoneboxMapView.m */; };
+		33D28BFC1888693C00E0B9AE /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33D28BFB1888693C00E0B9AE /* MessageUI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		33D28BF6188860B500E0B9AE /* MCMapOverlayButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MCMapOverlayButton.m; path = PhoneboxLogger/MCMapOverlayButton.m; sourceTree = "<group>"; };
 		33D28BF81888624300E0B9AE /* MCPhoneboxMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MCPhoneboxMapView.h; path = PhoneboxLogger/MCPhoneboxMapView.h; sourceTree = "<group>"; };
 		33D28BF91888624300E0B9AE /* MCPhoneboxMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MCPhoneboxMapView.m; path = PhoneboxLogger/MCPhoneboxMapView.m; sourceTree = "<group>"; };
+		33D28BFB1888693C00E0B9AE /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33D28BFC1888693C00E0B9AE /* MessageUI.framework in Frameworks */,
 				33D28BF418885EED00E0B9AE /* CoreLocation.framework in Frameworks */,
 				33D28BF218885EE800E0B9AE /* MapKit.framework in Frameworks */,
 				33D28BBB18885B5900E0B9AE /* CoreGraphics.framework in Frameworks */,
@@ -115,6 +118,7 @@
 		33D28BB718885B5900E0B9AE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				33D28BFB1888693C00E0B9AE /* MessageUI.framework */,
 				33D28BF318885EED00E0B9AE /* CoreLocation.framework */,
 				33D28BF118885EE800E0B9AE /* MapKit.framework */,
 				33D28BB818885B5900E0B9AE /* Foundation.framework */,

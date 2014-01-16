@@ -58,7 +58,23 @@
         
         for(CLPlacemark *placemark in placemarks){
             
-            NSLog(@"Were at:%@", placemark.debugDescription);
+            if([MFMailComposeViewController canSendMail]){
+                
+                MFMailComposeViewController *mailView = [[MFMailComposeViewController alloc] init];
+                [mailView setSubject:@"New phonebox"];
+                [mailView setMessageBody:[NSString stringWithFormat:@"Hi Sean,\n\nHere is a new Phone box for you:\n\n%@\n\nYou're welcome", placemark.description] isHTML:NO];
+                
+                [self presentViewController:mailView animated:YES completion:nil];
+                
+            } else {
+            
+                //Its good to have fallbacks if people don't have mail set up
+                UIActivityViewController *viewController = [[UIActivityViewController alloc] initWithActivityItems:@[[NSString stringWithFormat:@"Hi Sean,\n\nHere is a new Phone box for you:\n\n%@\n\nYou're welcome", placemark.description]] applicationActivities:nil];
+                [self presentViewController:viewController animated:YES completion:nil];
+                
+            }
+            
+            break;
             
         }
         
