@@ -31,7 +31,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+    
+    //Track user location on map
+    self.mapView.showsUserLocation = YES;
+    self.mapView.userTrackingMode = MKUserTrackingModeFollow;
+    
 }
 
 - (void)didReceiveMemoryWarning
