@@ -7,6 +7,14 @@
 //
 
 #import "MCAppDelegate.h"
+#import "MCMapViewController.h"
+
+@interface MCAppDelegate ()
+
+@property (nonatomic, strong) MCMapViewController *mapViewController;
+
+@end
+
 
 @implementation MCAppDelegate
 
@@ -15,6 +23,10 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
+    
+    self.mapViewController = [MCMapViewController new];
+    self.window.rootViewController = self.mapViewController;
+    
     [self.window makeKeyAndVisible];
     return YES;
 }
