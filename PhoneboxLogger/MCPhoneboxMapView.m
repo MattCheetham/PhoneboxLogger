@@ -7,11 +7,8 @@
 //
 
 #import "MCPhoneboxMapView.h"
-#import "MCMapOverlayButton.h"
 
 @interface MCPhoneboxMapView ()
-
-@property (nonatomic, strong) MCMapOverlayButton *addPhoneBoxButton;
 
 @end
 

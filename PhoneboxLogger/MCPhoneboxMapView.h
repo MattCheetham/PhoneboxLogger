@@ -7,7 +7,10 @@
 //
 
 #import <MapKit/MapKit.h>
+#import "MCMapOverlayButton.h"
 
 @interface MCPhoneboxMapView : MKMapView
+
+@property (nonatomic, strong) MCMapOverlayButton *addPhoneBoxButton;
 
 @end
