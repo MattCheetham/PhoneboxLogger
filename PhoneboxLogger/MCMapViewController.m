@@ -10,6 +10,8 @@
 
 @interface MCMapViewController ()
 
+@property (nonatomic, strong) MKMapView *mapView;
+
 @end
 
 @implementation MCMapViewController
@@ -19,6 +21,9 @@
     self = [super init];
     if (self) {
         // Custom initialization
+        self.mapView = [MKMapView new];
+        [self.view addSubview:self.mapView];
+        
     }
     return self;
 }
@@ -33,6 +38,12 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)viewWillLayoutSubviews
+{
+    [super viewWillLayoutSubviews];
+    self.mapView.frame = self.view.bounds;
 }
 
 @end
