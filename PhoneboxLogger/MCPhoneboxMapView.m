@@ -18,20 +18,22 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        // Initialization code
         
         self.addPhoneBoxButton = [[MCMapOverlayButton alloc] initWithFrame:CGRectZero];
         [self.addPhoneBoxButton setTitle:@"Add telephone box" forState:UIControlStateNormal];
         [self addSubview:self.addPhoneBoxButton];
         
     }
+    
     return self;
 }
 
 - (void)layoutSubviews
 {
+    
     [super layoutSubviews];
     
     self.addPhoneBoxButton.frame = CGRectMake(20, self.bounds.size.height - 54, self.bounds.size.width - 40, 34);
+    
 }
 @end

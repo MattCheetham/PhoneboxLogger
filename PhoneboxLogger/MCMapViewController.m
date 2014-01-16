@@ -9,7 +9,7 @@
 #import "MCMapViewController.h"
 #import "MCPhoneboxMapView.h"
 
-@interface MCMapViewController () <MFMailComposeViewControllerDelegate, MFMessageComposeViewControllerDelegate>
+@interface MCMapViewController () <MFMailComposeViewControllerDelegate>
 
 @property (nonatomic, strong) MCPhoneboxMapView *mapView;
 
@@ -21,12 +21,14 @@
 {
     self = [super init];
     if (self) {
-        // Custom initialization
+
         self.mapView = [MCPhoneboxMapView new];
         [self.mapView.addPhoneBoxButton addTarget:self action:@selector(promptUserForNumber) forControlEvents:UIControlEventTouchUpInside];
+        
         [self.view addSubview:self.mapView];
         
     }
+    
     return self;
 }
 
@@ -40,20 +42,18 @@
     
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 - (void)viewWillLayoutSubviews
 {
+    
     [super viewWillLayoutSubviews];
+    
     self.mapView.frame = self.view.bounds;
+    
 }
 
 - (void)promptUserForNumber
 {
+    
     UIAlertView *numberPrompt = [[UIAlertView alloc] initWithTitle:@"Phone number" message:@"Enter the phone number for this box" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Confirm", nil];
     numberPrompt.alertViewStyle = UIAlertViewStylePlainTextInput;
     numberPrompt.tag = 1;
@@ -62,6 +62,7 @@
     tf.keyboardType = UIKeyboardTypeNumberPad;
     
     [numberPrompt show];
+    
 }
 
 #pragma mark - Box geocoding and registration
@@ -119,6 +120,7 @@
 
 - (void)mailComposeController:(MFMailComposeViewController*)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError*)error
 {
+    
     [controller dismissViewControllerAnimated:YES completion:nil];
     
     if(result == MFMailComposeResultSent){
@@ -127,6 +129,7 @@
         [thankyouAlert show];
         
     }
+    
 }
 
 @end
