@@ -71,29 +71,39 @@
 {
     [[CLGeocoder new] reverseGeocodeLocation:self.mapView.userLocation.location completionHandler:^(NSArray *placemarks, NSError *error) {
         
-        for(CLPlacemark *placemark in placemarks){
+        if(!error && placemarks.count){
             
-            NSString *boxInformationText = [NSString stringWithFormat:@"Hi Sean,\n\nHere is a new Phone box for you:\n\nPhone Number: %@\n\nLocation: %@\n\nYou're welcome", phoneNumber, placemark.description];
-            
-            if([MFMailComposeViewController canSendMail]){
+            for(CLPlacemark *placemark in placemarks){
                 
-                MFMailComposeViewController *mailView = [[MFMailComposeViewController alloc] init];
-                mailView.mailComposeDelegate = self;
-                [mailView setToRecipients:@[@"sean@example.com"]];
-                [mailView setSubject:@"New phonebox"];
-                [mailView setMessageBody:boxInformationText isHTML:NO];
+                NSString *boxInformationText = [NSString stringWithFormat:@"Hi Sean,\n\nHere is a new Phone box for you:\n\nPhone Number: %@\n\nLocation: %@\n\nYou're welcome", phoneNumber, placemark.description];
                 
-                [self presentViewController:mailView animated:YES completion:nil];
+                if([MFMailComposeViewController canSendMail]){
+                    
+                    MFMailComposeViewController *mailView = [[MFMailComposeViewController alloc] init];
+                    mailView.mailComposeDelegate = self;
+                    [mailView setToRecipients:@[@"sean@example.com"]];
+                    [mailView setSubject:@"New phonebox"];
+                    [mailView setMessageBody:boxInformationText isHTML:NO];
+                    
+                    [self presentViewController:mailView animated:YES completion:nil];
+                    
+                } else {
                 
-            } else {
-            
-                //Its good to have fallbacks if people don't have mail set up
-                UIActivityViewController *viewController = [[UIActivityViewController alloc] initWithActivityItems:@[boxInformationText] applicationActivities:nil];
-                [self presentViewController:viewController animated:YES completion:nil];
+                    //Its good to have fallbacks if people don't have mail set up
+                    UIActivityViewController *viewController = [[UIActivityViewController alloc] initWithActivityItems:@[boxInformationText] applicationActivities:nil];
+                    [self presentViewController:viewController animated:YES completion:nil];
+                    
+                }
+                
+                break;
                 
             }
             
-            break;
+        } else {
+            
+            UIAlertView *error = [[UIAlertView alloc] initWithTitle:@"Error!" message:@"Whoops, looks like something went wrong. Please try again" delegate:self cancelButtonTitle:@"Okay" otherButtonTitles:nil];
+            
+            [error show];
             
         }
         
