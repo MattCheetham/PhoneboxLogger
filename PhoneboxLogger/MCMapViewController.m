@@ -7,10 +7,11 @@
 //
 
 #import "MCMapViewController.h"
+#import "MCPhoneboxMapView.h"
 
 @interface MCMapViewController ()
 
-@property (nonatomic, strong) MKMapView *mapView;
+@property (nonatomic, strong) MCPhoneboxMapView *mapView;
 
 @end
 
@@ -21,7 +22,7 @@
     self = [super init];
     if (self) {
         // Custom initialization
-        self.mapView = [MKMapView new];
+        self.mapView = [MCPhoneboxMapView new];
         [self.view addSubview:self.mapView];
         
     }
