@@ -23,6 +23,7 @@
     if (self) {
         // Custom initialization
         self.mapView = [MCPhoneboxMapView new];
+        [self.mapView.addPhoneBoxButton addTarget:self action:@selector(registerLocation) forControlEvents:UIControlEventTouchUpInside];
         [self.view addSubview:self.mapView];
         
     }
@@ -49,6 +50,11 @@
 {
     [super viewWillLayoutSubviews];
     self.mapView.frame = self.view.bounds;
+}
+
+- (void)registerLocation
+{
+    NSLog(@"Soon!");
 }
 
 @end
