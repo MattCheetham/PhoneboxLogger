@@ -54,7 +54,16 @@
 
 - (void)registerLocation
 {
-    NSLog(@"Soon!");
+    [[CLGeocoder new] reverseGeocodeLocation:self.mapView.userLocation.location completionHandler:^(NSArray *placemarks, NSError *error) {
+        
+        for(CLPlacemark *placemark in placemarks){
+            
+            NSLog(@"Were at:%@", placemark.debugDescription);
+            
+        }
+        
+        
+    }];
 }
 
 @end
