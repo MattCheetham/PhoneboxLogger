@@ -103,7 +103,7 @@
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
     
-    if (buttonIndex == 1) {
+    if (alertView.tag == 1 && buttonIndex == 1) {
         
         NSString *boxPhoneNumber = [alertView textFieldAtIndex:0].text;
         
