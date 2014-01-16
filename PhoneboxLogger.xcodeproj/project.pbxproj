@@ -20,6 +20,8 @@
 		33D28BDC18885B5900E0B9AE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 33D28BDA18885B5900E0B9AE /* InfoPlist.strings */; };
 		33D28BDE18885B5900E0B9AE /* PhoneboxLoggerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 33D28BDD18885B5900E0B9AE /* PhoneboxLoggerTests.m */; };
 		33D28BEC18885C9500E0B9AE /* MCMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33D28BEB18885C9500E0B9AE /* MCMapViewController.m */; };
+		33D28BF218885EE800E0B9AE /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33D28BF118885EE800E0B9AE /* MapKit.framework */; };
+		33D28BF418885EED00E0B9AE /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33D28BF318885EED00E0B9AE /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		33D28BDD18885B5900E0B9AE /* PhoneboxLoggerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhoneboxLoggerTests.m; sourceTree = "<group>"; };
 		33D28BEA18885C9500E0B9AE /* MCMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MCMapViewController.h; path = PhoneboxLogger/MCMapViewController.h; sourceTree = "<group>"; };
 		33D28BEB18885C9500E0B9AE /* MCMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MCMapViewController.m; path = PhoneboxLogger/MCMapViewController.m; sourceTree = "<group>"; };
+		33D28BF118885EE800E0B9AE /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		33D28BF318885EED00E0B9AE /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33D28BF418885EED00E0B9AE /* CoreLocation.framework in Frameworks */,
+				33D28BF218885EE800E0B9AE /* MapKit.framework in Frameworks */,
 				33D28BBB18885B5900E0B9AE /* CoreGraphics.framework in Frameworks */,
 				33D28BBD18885B5900E0B9AE /* UIKit.framework in Frameworks */,
 				33D28BB918885B5900E0B9AE /* Foundation.framework in Frameworks */,
@@ -103,6 +109,8 @@
 		33D28BB718885B5900E0B9AE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				33D28BF318885EED00E0B9AE /* CoreLocation.framework */,
+				33D28BF118885EE800E0B9AE /* MapKit.framework */,
 				33D28BB818885B5900E0B9AE /* Foundation.framework */,
 				33D28BBA18885B5900E0B9AE /* CoreGraphics.framework */,
 				33D28BBC18885B5900E0B9AE /* UIKit.framework */,
