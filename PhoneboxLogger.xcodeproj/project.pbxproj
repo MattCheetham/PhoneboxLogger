@@ -14,11 +14,6 @@
 		33D28BC518885B5900E0B9AE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 33D28BC418885B5900E0B9AE /* main.m */; };
 		33D28BC918885B5900E0B9AE /* MCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 33D28BC818885B5900E0B9AE /* MCAppDelegate.m */; };
 		33D28BCB18885B5900E0B9AE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33D28BCA18885B5900E0B9AE /* Images.xcassets */; };
-		33D28BD218885B5900E0B9AE /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33D28BD118885B5900E0B9AE /* XCTest.framework */; };
-		33D28BD318885B5900E0B9AE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33D28BB818885B5900E0B9AE /* Foundation.framework */; };
-		33D28BD418885B5900E0B9AE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33D28BBC18885B5900E0B9AE /* UIKit.framework */; };
-		33D28BDC18885B5900E0B9AE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 33D28BDA18885B5900E0B9AE /* InfoPlist.strings */; };
-		33D28BDE18885B5900E0B9AE /* PhoneboxLoggerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 33D28BDD18885B5900E0B9AE /* PhoneboxLoggerTests.m */; };
 		33D28BEC18885C9500E0B9AE /* MCMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33D28BEB18885C9500E0B9AE /* MCMapViewController.m */; };
 		33D28BF218885EE800E0B9AE /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33D28BF118885EE800E0B9AE /* MapKit.framework */; };
 		33D28BF418885EED00E0B9AE /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33D28BF318885EED00E0B9AE /* CoreLocation.framework */; };
@@ -26,16 +21,6 @@
 		33D28BFA1888624300E0B9AE /* MCPhoneboxMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33D28BF91888624300E0B9AE /* MCPhoneboxMapView.m */; };
 		33D28BFC1888693C00E0B9AE /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33D28BFB1888693C00E0B9AE /* MessageUI.framework */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		33D28BD518885B5900E0B9AE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 33D28BAD18885B5900E0B9AE /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 33D28BB418885B5900E0B9AE;
-			remoteInfo = PhoneboxLogger;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		33D28BB518885B5900E0B9AE /* PhoneboxLogger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhoneboxLogger.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -49,7 +34,6 @@
 		33D28BC718885B5900E0B9AE /* MCAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MCAppDelegate.h; sourceTree = "<group>"; };
 		33D28BC818885B5900E0B9AE /* MCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MCAppDelegate.m; sourceTree = "<group>"; };
 		33D28BCA18885B5900E0B9AE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		33D28BD018885B5900E0B9AE /* PhoneboxLoggerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhoneboxLoggerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		33D28BD118885B5900E0B9AE /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		33D28BD918885B5900E0B9AE /* PhoneboxLoggerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PhoneboxLoggerTests-Info.plist"; sourceTree = "<group>"; };
 		33D28BDB18885B5900E0B9AE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -79,16 +63,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		33D28BCD18885B5900E0B9AE /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				33D28BD218885B5900E0B9AE /* XCTest.framework in Frameworks */,
-				33D28BD418885B5900E0B9AE /* UIKit.framework in Frameworks */,
-				33D28BD318885B5900E0B9AE /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -110,7 +84,6 @@
 			isa = PBXGroup;
 			children = (
 				33D28BB518885B5900E0B9AE /* PhoneboxLogger.app */,
-				33D28BD018885B5900E0B9AE /* PhoneboxLoggerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -223,24 +196,6 @@
 			productReference = 33D28BB518885B5900E0B9AE /* PhoneboxLogger.app */;
 			productType = "com.apple.product-type.application";
 		};
-		33D28BCF18885B5900E0B9AE /* PhoneboxLoggerTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 33D28BE418885B5900E0B9AE /* Build configuration list for PBXNativeTarget "PhoneboxLoggerTests" */;
-			buildPhases = (
-				33D28BCC18885B5900E0B9AE /* Sources */,
-				33D28BCD18885B5900E0B9AE /* Frameworks */,
-				33D28BCE18885B5900E0B9AE /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				33D28BD618885B5900E0B9AE /* PBXTargetDependency */,
-			);
-			name = PhoneboxLoggerTests;
-			productName = PhoneboxLoggerTests;
-			productReference = 33D28BD018885B5900E0B9AE /* PhoneboxLoggerTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -250,11 +205,6 @@
 				CLASSPREFIX = MC;
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Matthew Cheetham";
-				TargetAttributes = {
-					33D28BCF18885B5900E0B9AE = {
-						TestTargetID = 33D28BB418885B5900E0B9AE;
-					};
-				};
 			};
 			buildConfigurationList = 33D28BB018885B5900E0B9AE /* Build configuration list for PBXProject "PhoneboxLogger" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -269,7 +219,6 @@
 			projectRoot = "";
 			targets = (
 				33D28BB418885B5900E0B9AE /* PhoneboxLogger */,
-				33D28BCF18885B5900E0B9AE /* PhoneboxLoggerTests */,
 			);
 		};
 /* End PBXProject section */
@@ -281,14 +230,6 @@
 			files = (
 				33D28BC318885B5900E0B9AE /* InfoPlist.strings in Resources */,
 				33D28BCB18885B5900E0B9AE /* Images.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		33D28BCE18885B5900E0B9AE /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				33D28BDC18885B5900E0B9AE /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,23 +248,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		33D28BCC18885B5900E0B9AE /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				33D28BDE18885B5900E0B9AE /* PhoneboxLoggerTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		33D28BD618885B5900E0B9AE /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 33D28BB418885B5900E0B9AE /* PhoneboxLogger */;
-			targetProxy = 33D28BD518885B5900E0B9AE /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		33D28BC118885B5900E0B9AE /* InfoPlist.strings */ = {
@@ -443,48 +368,6 @@
 			};
 			name = Release;
 		};
-		33D28BE518885B5900E0B9AE /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/PhoneboxLogger.app/PhoneboxLogger";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "PhoneboxLogger/PhoneboxLogger-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "PhoneboxLoggerTests/PhoneboxLoggerTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Debug;
-		};
-		33D28BE618885B5900E0B9AE /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/PhoneboxLogger.app/PhoneboxLogger";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "PhoneboxLogger/PhoneboxLogger-Prefix.pch";
-				INFOPLIST_FILE = "PhoneboxLoggerTests/PhoneboxLoggerTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -502,15 +385,6 @@
 			buildConfigurations = (
 				33D28BE218885B5900E0B9AE /* Debug */,
 				33D28BE318885B5900E0B9AE /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		33D28BE418885B5900E0B9AE /* Build configuration list for PBXNativeTarget "PhoneboxLoggerTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				33D28BE518885B5900E0B9AE /* Debug */,
-				33D28BE618885B5900E0B9AE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
